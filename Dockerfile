@@ -7,7 +7,7 @@ RUN npm ci
 
 RUN adduser ooye -Du 1001
 RUN chown -R ooye /app
-RUN ln -s /data/ooye.db /app/db/ooye.db
+RUN ln -s /data/ooye.db /app/db/ooye.db || true
 RUN mkdir /data && chown -R ooye:ooye /data
 USER ooye
 
